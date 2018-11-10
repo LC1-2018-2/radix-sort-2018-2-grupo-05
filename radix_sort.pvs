@@ -137,6 +137,7 @@ MEASURE length(l)
 %**************************************************************
 
 % Lemma states that merge permutes (preserves) data
+
   merge_permutes : CONJECTURE
   FORALL(l1, l2 : list[nat], d : nat):
   permutations(append(l1,l2),merge(l1,l2,d))

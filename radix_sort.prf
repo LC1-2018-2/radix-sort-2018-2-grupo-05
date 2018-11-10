@@ -2389,123 +2389,19 @@
  (merge_permutes 0
   (merge_permutes-1 nil 3747591401
    ("" (measure-induct+ "length(l1)+length(l2)" ("l1" "l2"))
-    (("" (skeep)
-      (("" (expand "permutations")
-        (("" (skeep)
-          (("" (rewrite "occurrences_of_app")
-            (("" (inst -1 "x!1" "x!2")
-              (("" (inst -1 "d")
-                (("" (assert)
-                  (("" (split)
-                    (("1" (inst -1 "x")
-                      (("1" (rewrite "occurrences_of_app") nil nil))
-                      nil)
-                     ("2"
-                      (typepred "occurrences(merge(x!1, x!2, d))(x)")
-                      (("2" (expand ">=")
-                        (("2" (expand "merge")
-                          (("2" (lift-if)
-                            (("2" (split)
-                              (("1"
-                                (split)
-                                (("1"
-                                  (flatten)
-                                  (("1"
-                                    (split)
-                                    (("1"
-                                      (split)
-                                      (("1" (postpone) nil nil)
-                                       ("2" (postpone) nil nil))
-                                      nil)
-                                     ("2"
-                                      (split)
-                                      (("1" (postpone) nil nil)
-                                       ("2" (postpone) nil nil))
-                                      nil))
-                                    nil))
-                                  nil)
-                                 ("2"
-                                  (flatten)
-                                  (("2"
-                                    (split)
-                                    (("1"
-                                      (split)
-                                      (("1" (propax) nil nil)
-                                       ("2" (propax) nil nil))
-                                      nil)
-                                     ("2"
-                                      (split)
-                                      (("1" (propax) nil nil)
-                                       ("2" (propax) nil nil))
-                                      nil))
-                                    nil))
-                                  nil))
-                                nil)
-                               ("2"
-                                (flatten)
-                                (("2"
-                                  (split)
-                                  (("1"
-                                    (flatten)
-                                    (("1"
-                                      (split)
-                                      (("1"
-                                        (flatten)
-                                        (("1"
-                                          (split)
-                                          (("1" (propax) nil nil)
-                                           ("2" (propax) nil nil))
-                                          nil))
-                                        nil)
-                                       ("2"
-                                        (flatten)
-                                        (("2"
-                                          (prop)
-                                          (("2"
-                                            (hide-all-but (-3 1))
-                                            (("2" (postpone) nil nil))
-                                            nil))
-                                          nil))
-                                        nil))
-                                      nil))
-                                    nil)
-                                   ("2"
-                                    (flatten)
-                                    (("2"
-                                      (split)
-                                      (("1"
-                                        (flatten)
-                                        (("1"
-                                          (split)
-                                          (("1" (propax) nil nil)
-                                           ("2" (propax) nil nil))
-                                          nil))
-                                        nil)
-                                       ("2"
-                                        (flatten)
-                                        (("2"
-                                          (split)
-                                          (("1" (flatten) nil nil)
-                                           ("2"
-                                            (flatten)
-                                            (("2"
-                                              (hide-all-but (-1 2))
-                                              (("2"
-                                                (postpone)
-                                                nil
-                                                nil))
-                                              nil))
-                                            nil))
-                                          nil))
-                                        nil))
-                                      nil))
-                                    nil))
-                                  nil))
-                                nil))
-                              nil))
-                            nil))
-                          nil))
-                        nil))
+    (("" (inst -1 "x!1" "x!2")
+      (("" (skeep)
+        (("" (inst -1 "d")
+          (("" (split)
+            (("1" (propax) nil nil)
+             ("2" (expand "permutations")
+              (("2" (skeep)
+                (("2" (lemma "occurrences_of_app")
+                  (("2" (inst -1 "x!1" "x!2" "x")
+                    (("2" (rewrite "occurrences_of_app")
+                      (("2"
+                        (typepred "occurrences(merge(x!1, x!2, d))(x)")
+                        (("2" (postpone) nil nil)) nil))
                       nil))
                     nil))
                   nil))
